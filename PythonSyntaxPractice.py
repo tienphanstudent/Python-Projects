@@ -1,5 +1,5 @@
 # Tien Phan
-# Project 1
+# Practice of python syntax
 
 lovely_loveseat_description = """Lovely Loveseat. Tufted polyester blend on wood. 32 inches high x 40 inches wide x 30 inches deep. Red or White."""
 lovely_loveseat_price = 254.00
