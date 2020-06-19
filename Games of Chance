@@ -59,12 +59,29 @@ def cho_han(bet, guess):
                      + str(bet) + " and have currently " + str(money))
   
 # function that simulates two players drawing from a deck of cards
-def deck_of_cards()
+def deck_of_cards(bet):
+  global money
+  player1 = random.randint(1, 52)
+  player2 = random.randint(1, 52)
+  
+  if player1 > player2:
+    money += bet
+    return print("Your card is: " + str(player1) + "\nand the other player is: " + str(player2) + "\nYour card is higher so you won: " 
+    + str(bet) + " and currently have:  " + str(money) + "\n")
+  elif player2 > player1:
+    money -= bet
+    return print("Your card is: " + str(player1) + "\nand the other player is: " + str(player2) + "\nYour card is lower so you lost: " 
+    + str(bet) + " and currently have:  " + str(money) + "\n")
+
+  
 #Call your game of chance functions here
 # tester function for coin flip function
 coin_flip(16, "tails")
-
+newLine()
 # tester function for Cho-Han game 
 cho_han(10, "even")
 newLine()
 cho_han(10, "odd")
+newLine()
+#tester function for deck of cards game
+deck_of_cards(50)
