@@ -1,0 +1,12 @@
+single - chosen single number - *35
+split - chosen two adjacent number - *17
+street - chosen 3 horizonatal numbers - *11
+square - 4 chosen numbers that share a corner - *8
+six line - 6 chosen numbers in connecting row - *5
+column - chosen column - *2
+1st dozen - 1-12 - *2
+2nd dozen - 13-24 - *2
+3rd dozen - 25-36 - *2
+odd and even - *1
+red or black - *1
+low or high - 1-18, 19-36 - *1
