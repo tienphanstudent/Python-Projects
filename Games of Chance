@@ -15,6 +15,9 @@ def newLine():
 def coin_flip(bet, call_side):
     global money
     coin = random.randint(1, 2)
+    print("Simulating coin flip...\n")
+    print("---------------------------\n")
+
     if coin == 1 and call_side == "heads":
         money += bet
         return print("The coin is heads and you called the right side! You won "
@@ -40,6 +43,8 @@ def cho_han(bet, guess):
   #dice1 = 2
   #dice2 = 2
   sumResult = dice1 + dice2
+  print("Simulating Cho Han...\n")
+  print("---------------------------\n")
 
   if (sumResult == 2 or sumResult == 4 or sumResult == 6 or sumResult == 8 or sumResult == 10 or sumResult == 12) and guess == "even":
     money += bet
@@ -61,9 +66,11 @@ def cho_han(bet, guess):
 # function that simulates two players drawing from a deck of cards
 def deck_of_cards(bet):
   global money
-  player1 = random.randint(1, 52)
-  player2 = random.randint(1, 52)
-  
+  player1 = random.randint(1, 1)
+  player2 = random.randint(1, 1)
+  print("Simulating Deck Of Cards...\n")
+  print("---------------------------\n")
+
   if player1 > player2:
     money += bet
     return print("Your card is: " + str(player1) + "\nand the other player is: " + str(player2) + "\nYour card is higher so you won: " 
@@ -72,9 +79,24 @@ def deck_of_cards(bet):
     money -= bet
     return print("Your card is: " + str(player1) + "\nand the other player is: " + str(player2) + "\nYour card is lower so you lost: " 
     + str(bet) + " and currently have:  " + str(money) + "\n")
+  elif player1 == player2:
+    print("Your card is: " + str(player1) + "\nand the other player is: " + str(player2) + "\nThe cards are the same and it's a tie so you don't win or lose money " 
+     + " and currently have:  " + str(money) + "\n")
+    return 0
+
+def roulette(bet, guess):
+  global money
+  num = random.randint(0, 36)
+  print("Simulating roulette...\n")
+  print("---------------------------\n")
+
+  if num == 
+  
+
 
   
 #Call your game of chance functions here
+
 # tester function for coin flip function
 coin_flip(16, "tails")
 newLine()
