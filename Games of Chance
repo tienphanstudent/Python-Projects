@@ -1,0 +1,70 @@
+# Tien Phan
+# Games of Chance
+
+import random
+
+# defined global variable
+money = 100
+
+# Write your game of chance functions here
+
+# function that flips a coin and prints out the result
+def newLine():
+  return print("\n") 
+
+def coin_flip(bet, call_side):
+    global money
+    coin = random.randint(1, 2)
+    if coin == 1 and call_side == "heads":
+        money += bet
+        return print("The coin is heads and you called the right side! You won "
+                     + str(bet) + " and have currently " + str(money))
+    elif coin == 2 and call_side == "tails":
+        money += bet
+        return print("The coin is tails and you called the right side! You won "
+                     + str(bet) + " and have currently " + str(money))
+    elif coin == 1 and call_side == "tails":
+        money -= bet
+        return print("The coin is heads and you called the wrong side! You lost "
+                     + str(bet) + " and have currently " + str(money))
+    else:
+        money -= bet
+        return print("The coin is tails and you called the wrong side! You lost "
+                     + str(bet) + " and have currently " + str(money))
+
+# function that simulates the game Cho-Han
+def cho_han(bet, guess):
+  global money
+  dice1 = random.randint(1, 6)
+  dice2 = random.randint(1, 6)
+  #dice1 = 2
+  #dice2 = 2
+  sumResult = dice1 + dice2
+
+  if (sumResult == 2 or sumResult == 4 or sumResult == 6 or sumResult == 8 or sumResult == 10 or sumResult == 12) and guess == "even":
+    money += bet
+    return print("The result is " + str(sumResult) + " which is an even number and you won: "
+                     + str(bet) + " and have currently " + str(money))
+  elif (sumResult == 3 or sumResult == 5 or sumResult == 7 or sumResult == 9 or sumResult == 11) and guess == "odd":
+    money += bet
+    return print("The result is " + str(sumResult) + " which is an odd number and you won: "
+                     + str(bet) + " and have currently " + str(money))
+  elif (sumResult == 2 or sumResult == 4 or sumResult == 6 or sumResult == 8 or sumResult == 10 or sumResult == 12) and guess == "odd":
+    money -= bet
+    return print("The result is " + str(sumResult) + " which is an even number, your guess was an odd number so you lost: "
+                     + str(bet) + " and have currently " + str(money))
+  else:
+    money -= bet
+    return print("The result is " + str(sumResult) + " which is an odd number, your guess was an even number so you lost: "
+                     + str(bet) + " and have currently " + str(money))
+  
+# function that simulates two players drawing from a deck of cards
+def deck_of_cards()
+#Call your game of chance functions here
+# tester function for coin flip function
+coin_flip(16, "tails")
+
+# tester function for Cho-Han game 
+cho_han(10, "even")
+newLine()
+cho_han(10, "odd")
