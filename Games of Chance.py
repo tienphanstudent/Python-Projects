@@ -48,6 +48,10 @@ def cho_han(bet, guess):
     print("Simulating Cho Han...\n")
     print("---------------------------\n")
 
+#    if sumResult % 2 == 0 and guess == "even":
+#        money += bet
+#        return print("The result is " + str(sumResult) + " which is an even number and you won: "
+#                     + str(bet) + " and have currently " + str(money))
     if (sumResult == 2 or sumResult == 4 or sumResult == 6 or sumResult == 8 or sumResult == 10 or sumResult == 12) and guess == "even":
         money += bet
         return print("The result is " + str(sumResult) + " which is an even number and you won: "
