@@ -181,3 +181,7 @@ def color_count(color):
     return count
 
 # print(color_count("white"))
+colors = ["red", "yellow", "green", "white", "black", "blue", "purple"]
+
+for i in colors:
+    print("Thread Shed sold {0} threads of {1} thread today.".format(color_count(i), i))
